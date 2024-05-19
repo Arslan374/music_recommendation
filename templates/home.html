@@ -1,0 +1,17 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="jumbotron p-3 mb-20 bg-dark text-white">
+    <h1 class="display-4">Welcome to the Music Recommendation System</h1>
+    <p class="lead">Select an option below to explore recommendations.</p>
+    <hr class="my-4">
+    <div style="display: flex; justify-content: center;">
+        <a class="btn btn-primary btn-lg m-3" href="{% url 'new_user' %}" role="button">New User</a>
+        <a class="btn btn-secondary btn-lg m-3" href="{% url 'existing_users' %}" role="button">Existing Users</a>
+    </div>
+    <hr>
+    <br>
+</div>
+{% endblock %}

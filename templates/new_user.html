@@ -1,0 +1,14 @@
+<!-- templates/new_user.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron p-3 mb-2 bg-dark text-white">
+<h2>New User Recommendations</h2>
+<p>Here are some recommendations based on association rules:</p>
+<p>Total = {{ recommendations|length }}</p>
+<ul class="list-group">
+    {% for recommendation in recommendations %}
+    <li class="list-group-item">{{ recommendation }}</li>
+    {% endfor %}
+</ul></div>
+{% endblock %}

@@ -1,0 +1,14 @@
+<!-- templates/existing_users.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron p-3 mb-2 bg-dark text-white">
+<h2>Select an Existing User</h2>
+<ul class="list-group">
+    {% for user_id in user_ids %}
+    <li class="list-group-item">
+        <a href="{% url 'existing_user_recommendations' user_id=user_id %}">User {{ user_id }}</a>
+    </li>
+    {% endfor %}
+</ul></div>
+{% endblock %}

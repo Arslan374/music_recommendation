@@ -1,0 +1,13 @@
+<!-- templates/existing_user_recommendations.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron p-3 mb-2 bg-dark text-white">
+<h2>Recommendations for User {{ user_id }}</h2>
+<p>Here are some recommendations based on collaborative filtering:</p>
+<ul class="list-group">
+    {% for recommendation in recommendations %}
+    <li class="list-group-item">{{ recommendation }}</li>
+    {% endfor %}
+</ul></div>
+{% endblock %}
